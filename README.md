@@ -1,7 +1,7 @@
 
 # element-scroll-top
 
-  Smooth window scroll to position with requestAnimationFrame and [Tween](https://github.com/component/tween).
+  Smooth element scroll to position with requestAnimationFrame and [Tween](https://github.com/component/tween).
 
 ## Installation
 
