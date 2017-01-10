@@ -1,12 +1,12 @@
 {
-  "name": "scroll-to",
-  "repo": "component/scroll-to",
-  "description": "Smooth window scroll to position with requestAnimationFrame",
-  "version": "0.0.2",
+  "name": "element-scroll-top",
+  "repo": "component/element-scroll-top",
+  "description": "Smooth element scroll to top position with requestAnimationFrame",
+  "version": "0.0.3",
   "keywords": [
     "scroll",
     "animate",
-    "scroll-to"
+    "element-scroll-top"
   ],
   "dependencies": {
     "component/raf": "1.2.0",

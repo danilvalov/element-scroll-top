@@ -43,6 +43,7 @@
 
   <script>
     var elementScrollTop = require('element-scroll-top');
+    var events = require('event');
     var div = document.querySelector('div');
     var ul = document.querySelector('ul');
 
@@ -52,13 +53,13 @@
       ul.appendChild(li);
     }
 
-    div.addEventListener('click', function(e){
+    events.bind(window, 'click', function(e){
       var top = e.pageY;
 
       console.log('scrolling div element to %s', top);
 
       elementScrollTop(div, top);
-    }, false);
+    });
   </script>
 </body>
 </html>
