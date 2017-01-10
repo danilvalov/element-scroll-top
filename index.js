@@ -6,39 +6,44 @@ var Tween = require('tween');
 var raf = require('raf');
 
 /**
- * Expose `scrollTo`.
+ * Expose `elementScrollTop`.
  */
 
-module.exports = scrollTo;
+module.exports = elementScrollTop;
 
 /**
- * Scroll to `(x, y)`.
+ * Scroll `_element` to `top`.
  *
- * @param {Number} x
- * @param {Number} y
+ * @param {Element} _element
+ * @param {Number} top
+ * @param {Object} options
  * @api public
  */
 
-function scrollTo(x, y, options) {
+function elementScrollTop(_element, top, options) {
   options = options || {};
 
   // start position
-  var start = scroll();
+  const start = {
+    top: _element.scrollTop
+  };
 
   // setup tween
-  var tween = Tween(start)
+  const tween = Tween(start)
     .ease(options.ease || 'out-circ')
-    .to({ top: y, left: x })
+    .to({
+      top: top
+    })
     .duration(options.duration || 1000);
 
   // scroll
-  tween.update(function(o){
-    window.scrollTo(o.left | 0, o.top | 0);
+  tween.update(function (o) {
+    _element.scrollTop = o.top;
   });
 
   // handle end
-  tween.on('end', function(){
-    animate = function(){};
+  tween.on('end', function () {
+    animate = function () {};
   });
 
   // animate
@@ -48,19 +53,6 @@ function scrollTo(x, y, options) {
   }
 
   animate();
-  
+
   return tween;
-}
-
-/**
- * Return scroll position.
- *
- * @return {Object}
- * @api private
- */
-
-function scroll() {
-  var y = window.pageYOffset || document.documentElement.scrollTop;
-  var x = window.pageXOffset || document.documentElement.scrollLeft;
-  return { top: y, left: x };
 }

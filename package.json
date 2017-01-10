@@ -1,11 +1,11 @@
 {
-  "name": "scroll-to",
-  "description": "Smooth window scroll to position with requestAnimationFrame",
-  "version": "0.0.2",
+  "name": "element-scroll-top",
+  "description": "Smooth element scroll to y-position with requestAnimationFrame",
+  "version": "0.0.3",
   "keywords": [
     "scroll",
     "animate",
-    "scroll-to"
+    "element-scroll-top"
   ],
   "dependencies": {
     "component-raf": "1.2.0",
@@ -19,11 +19,11 @@
   "main": "index.js",
   "component": {
     "scripts": {
-      "scroll-to/index.js": "index.js"
+      "element-scroll-top/index.js": "index.js"
     }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/component/scroll-to.git"
+    "url": "https://github.com/danilvalov/element-scroll-top.git"
   }
 }

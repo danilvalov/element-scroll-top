@@ -1,25 +1,27 @@
 
-# scroll-to
+# element-scroll-top
 
   Smooth window scroll to position with requestAnimationFrame and [Tween](https://github.com/component/tween).
 
 ## Installation
 
-    $ component install component/scroll-to
+    $ component install component/element-scroll-top
 
 ## API
 
-### scrollTo(x, y, [options])
+### elementScrollTop(element, top, [options])
 
-  Scroll to the given point `(x, y)` with the given `options`:
+  Scroll to the given point `top` with the given `options`:
 
   - `ease` easing function defaulting to "out-circ" (view [ease](https://github.com/component/ease) for more)
   - `duration` animation duration defaulting to `1000`
 
 ```js
-var scrollTo = require('scroll-to');
+var elementScrollTop = require('element-scroll-top');
 
-scrollTo(500, 1200, {
+var element = document.getElementById('test');
+
+elementScrollTop(element, 1200, {
   ease: 'out-bounce',
   duration: 1500
 });
